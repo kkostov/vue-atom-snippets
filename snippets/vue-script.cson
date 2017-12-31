@@ -1,7 +1,7 @@
 '.text.html.vue .source.js.embedded.html':
   'Vue computed':
-    'prefix': 'vdata'
-    'body': """
+    prefix: 'vdata'
+    body: """
     data() {
       return {
         ${1:key}: "${2:value}"
@@ -10,8 +10,8 @@
     """
     'description': 'Vue Component Data'
   'Vue Methods':
-    'prefix': 'vmethod'
-    'body': """
+    prefix: 'vmethod'
+    body: """
     methods: {
       ${1:name}() {
         ${0}
@@ -20,8 +20,8 @@
     """
     'description': 'vue method'
   'Vue Computed':
-    'prefix': 'vcomputed'
-    'body': """
+    prefix: 'vcomputed'
+    body: """
     computed: {
       ${1:name}() {
         return this.${2:data} ${0}
@@ -30,8 +30,8 @@
     """
     'description': 'computed value'
   'Vue Watchers':
-    'prefix': 'vwatcher'
-    'body': """
+    prefix: 'vwatcher'
+    body: """
     watch: {
       ${1:name}(${2:newValue}, ${3:oldValue}) {
         ${0}
@@ -40,8 +40,8 @@
     """
     'description': 'vue watcher'
   'Vue Props with Default':
-    'prefix': 'vprops'
-    'body': """
+    prefix: 'vprops'
+    body: """
     props: {
       ${1:propName}: {
         type: ${2:String},
