@@ -1,18 +1,31 @@
 {
   "name": "vue-atom-snippets",
-  "main": "./lib/vue-atom-snippets",
-  "version": "0.0.0",
-  "description": "A short description of your package",
+  "version": "1.0.0",
+  "description":
+    "This package is an Atom port of the excellent [`Vue VSCode Snippets`](https://github.com/sdras/vue-vscode-snippets) by @sdras",
   "keywords": [
+    "atom",
+    "atom-extension",
+    "atom-vue",
+    "vue2",
+    "vuejs",
+    "vuejs2",
+    "vue-snippets",
+    "snippets",
+    "atom-snippets",
+    "nuxt",
+    "nuxt-snippets",
+    "vuex",
+    "vuex-snippets"
   ],
-  "activationCommands": {
-    "atom-workspace": "vue-atom-snippets:toggle"
-  },
+  "activationHooks": [
+    "language-javascript:grammar-used",
+    "language-vue:grammar-used"
+  ],
   "repository": "https://github.com/atom/vue-atom-snippets",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
