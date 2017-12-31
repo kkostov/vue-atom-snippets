@@ -1,0 +1,22 @@
+'.source.js.jsx .meta.brace':
+  'Nuxt Font':
+    prefix: 'nfont'
+    body: '{ rel: \'stylesheet\', href: \'${1:https://fonts.googleapis.com/css?family=Montserrat:600|Rufina:700}\' },'
+
+'.source.js.jsx':
+  'Nuxt CSS File':
+    prefix: 'ncss'
+    body: 'css: [\'assets/${1:normalize.css}\'],'
+  'Nuxt Modules':
+    prefix: 'nmod'
+    body: 'modules: [\'${1:moduleName}\']'
+  'Nuxt Plugins':
+    prefix: 'nplugs'
+    body: """
+    plugins: [
+      \'~/plugins/${1:name}.js\'
+      ],
+    """
+  'Nuxt Plugin':
+    prefix: 'nplug'
+    body: '\'~/plugins/${1:name}.js\''

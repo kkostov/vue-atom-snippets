@@ -1,0 +1,20 @@
+'.text.html.vue':
+  'Vue Single File Component':
+    'prefix': 'vbase'
+    'body': """
+      <template>
+        <div>
+
+        </div>
+      </template>
+
+      <script>
+        export default {
+          $1
+        }
+      </script>
+
+      <style scoped>
+
+      </style>
+    """

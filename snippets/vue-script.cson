@@ -1,0 +1,148 @@
+'.text.html.vue .source.js.embedded.html':
+  'Vue computed':
+    'prefix': 'vdata'
+    'body': """
+    data() {
+      return {
+        ${1:key}: "${2:value}"
+      }
+    },
+    """
+    'description': 'Vue Component Data'
+  'Vue Methods':
+    'prefix': 'vmethod'
+    'body': """
+    methods: {
+      ${1:name}() {
+        ${0}
+      }
+    },
+    """
+    'description': 'vue method'
+  'Vue Computed':
+    'prefix': 'vcomputed'
+    'body': """
+    computed: {
+      ${1:name}() {
+        return this.${2:data} ${0}
+      }
+    },
+    """
+    'description': 'computed value'
+  'Vue Watchers':
+    'prefix': 'vwatcher'
+    'body': """
+    watch: {
+      ${1:name}(${2:newValue}, ${3:oldValue}) {
+        ${0}
+      }
+    },
+    """
+    'description': 'vue watcher'
+  'Vue Props with Default':
+    'prefix': 'vprops'
+    'body': """
+    props: {
+      ${1:propName}: {
+        type: ${2:String},
+        default: ${0}
+      },
+    },
+    """
+    'description': 'Vue Props with Default'
+  'Vue Import File':
+    prefix: 'vimport'
+    body: 'import ${1:New} from \'./components/${1:New}.vue\';'
+  'Vue Import into the Component':
+    prefix: 'vimport-c'
+    body: """
+    components: {
+      ${1:New},
+    },
+    """
+    'description': 'Import one component into another, within export statement'
+  'Vue Import Export':
+    prefix: 'vimport-export'
+    body: """import ${1:Name} from '~components/${1:Name}.vue'
+
+    export default {
+      components: {
+        ${1:Name},
+      }
+    }
+    """
+    description: 'import a component and include it in export default'
+  'Vue Filter':
+    prefix: 'vfilter'
+    body: """
+    filters: {
+      ${1:fnName}: function(${2:value}) {
+        return ${2:value}${0};
+      }
+    },
+    """
+  'Vue Mixin':
+    prefix: 'vmixin'
+    body: """
+    const ${1:mixinName} = {
+      mounted() {
+        console.log('hello from mixin!')
+      }
+    },
+    """
+  'Vue Use Mixin':
+    prefix: 'vmixin-use'
+    body: 'mixins: [${1:mixinName}]'
+  'Vue Custom Directive':
+    prefix: 'vc-direct'
+    body: """
+    Vue.directive('${1:directiveName}', {
+      bind(el, binding, vnode) {
+        el.style.${2:arg} = binding.value.${2:arg};
+      }
+    }),
+    """
+  'Vue Import Library':
+    prefix: 'vimport-lib'
+    body: 'import { ${1:libName} } from \'${1:libName}\''
+  'Vue Import GSAP':
+    prefix: 'vimport-gsap'
+    body: 'import { TimelineMax, ${1:Ease} } from \'gsap\''
+  'Vue Transition Methods with JavaScript Hooks':
+    prefix: 'vanimhook-js'
+    body: """
+    beforeEnter(el) {
+      console.log('beforeEnter');
+    },
+    enter(el, done) {
+      console.log('enter');
+      done();
+    },
+    beforeLeave(el) {
+      console.log('beforeLeave');
+    },
+    leave(el, done) {
+      console.log('leave');
+      done();
+    },
+    """
+  'Vue Commit Vuex Store in Methods':
+    prefix: 'vcommit'
+    body: """
+    ${1:mutationName}() {
+      this.$store.commit('${1:mutationName}', ${2:payload})
+    },
+    """
+  'Vue Dispatch Vuex Store in Methods':
+    prefix: 'vdispatch'
+    body: """
+    ${1:actionName}() {
+      this.$store.dispatch('${1:actionName}', ${2:payload})
+    },
+    """
+  'Incrementer':
+    prefix: 'vinc'
+    body: 'return ${1:this.num} += ${2:1}'
+  'Decrementer':
+    prefix: 'vdec'
+    body: 'return ${1:this.num} -= ${2:1}'

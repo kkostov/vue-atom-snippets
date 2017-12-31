@@ -1,0 +1,63 @@
+'.text.html.vue':
+  'Vue v-for':
+    'prefix': 'vfor'
+    'body': """
+      <${1:div} v-for="${2:item} in ${2:item}s" :key="${2:item}.id">
+        {{ ${2:item} }}
+      </${1:div}>
+    """
+  'Vue v-model Directive':
+    prefix: 'vmodel'
+    body: '<input v-model="${1:data}" type="text" />'
+  'Vue v-model Number Directive':
+    prefix: 'vmodel-num'
+    body: '<input v-model.number="${1:numData}" type="number" step="1" />'
+  'Vue v-on Shortcut Directive':
+    prefix: 'von'
+    body: '@click="${1:handler}(${2:arg}, $event)"'
+  'Vue Component with Props Binding':
+    prefix: 'vel-props'
+    body: '<${1:component} :${2:propName}="${0}"></${1:component}>'
+    description: 'component element with props'
+  'Vue Image Source Binding':
+    prefix: 'vsrc'
+    body: '<img :src="${1:fileName}" alt="${2:altText}"/>'
+    description: "image source binding"
+  'Vue Style Binding':
+    prefix: 'vstyle'
+    body: '<${1:div} :style="{ fontSize: ${2:data} + \'px\' }"></${1:div}>'
+    description: "vue inline style binding"
+  'Vue Style Binding Object':
+    prefix: 'vstyle-obj'
+    body: '<${1:div} :style="[${2:styleObjectA}, ${3:styleObjectB]}"></${1:div}>'
+    decription: "vue inline style binding, objects"
+  'Vue Class Binding':
+    prefix: 'vclass'
+    body: '<${1:div} :class="{ ${2:className}: ${3:data} }"></${1:div}>'
+    description: 'vue class binding'
+  'Vue Class Binding Object':
+    prefix: 'vclass-obj'
+    body: '<${1:div} :class="[${2:classNameA}, ${3:classNameB}]"></${1:div}>'
+    description: 'vue class binding'
+  'Vue Multiple Conditional Class Bindings':
+    prefix: 'vclass-obj-mult'
+    body: '<${1:div} :class="[${2:classNameA}, {${3:classNameB} : ${4:condition}}]"></${1:div}>'
+    description: 'vue multiple conditional class bindings'
+  'Vue Transition Component with JavaScript Hooks':
+    prefix: 'vanim'
+    body: """
+    <transition
+      mode="out-in"
+      @before-enter="beforeEnter"
+      @enter="enter"
+
+      @before-leave="beforeLeave"
+      @leave="leave"
+      :css="false">
+    </transition>
+    """
+    description: 'transition component js hooks'
+  'Vue Nuxt Routing Link':
+    prefix: 'vnuxtl'
+    body: '<nuxt-link to="/${1:page}">${1:page}</nuxt-link>'
+    description: 'nuxt routing link'
