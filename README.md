@@ -71,6 +71,7 @@ The snippets provided by the plugin will be available in all **.vue** files as w
 | `vanimhook-js`   | Using the Transition component JS hooks in methods                       |
 | `vcommit`        | Commit to Vuex store in methods for mutation                             |
 | `vdispatch`      | Dispatch to Vuex store in methods for action                             |
+| `vtest`          | A simple unit testing component                                          |
 | `vinc`           | incrementer                                                              |
 | `vdec`           | decrementer                                                              |
 
@@ -93,3 +94,9 @@ The snippets provided by the plugin will be available in all **.vue** files as w
 | `nmod`   | add module entry                                        |
 | `nplugs` | add plugins for global level functionality              |
 | `nplug`  | add a plugin to the plugins section                     |
+
+### Extra (plaintext)
+
+| Snippet     | Purpose                 |
+| ----------- | ----------------------- |
+| `gitignore` | .gitignore file presets |
