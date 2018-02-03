@@ -1,5 +1,5 @@
 '.text.html.vue .source.js.embedded.html':
-  'Vue computed':
+  'Vue data':
     prefix: 'vdata'
     body: """
     data() {
