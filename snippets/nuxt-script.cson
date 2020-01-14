@@ -1,0 +1,33 @@
+'.text.html.vue .source.js.embedded.html':
+  'Nuxt Async':
+  	prefix: "nasyncdata"
+  	body: """
+      async asyncData ({ ${1:params} }) {
+        const { data } = await axios.get('${2:endpoint}')
+        return { ${3:key}:${4:value} }
+      },
+    """
+  	description: "Nuxt asyncData"
+  'Nuxt Fetch':
+  	prefix: "nfetch"
+  	body: """
+      async fetch ({ store, ${1:params} }) {
+        let { data } = await axios.get('${2:endpoint}')
+        store.commit('${3:MUTATION_TYPE}', data)
+      },
+    """
+  	description: "Nuxt Fetch"
+  'Nuxt Head':
+  	prefix: "nhead"
+  	body: """
+  		head () {
+        return {
+          title: ${1:'Page Title'},
+          meta: [
+            // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+            { hid: 'description', name: 'description', content: ${2:'My custom description'} }
+          ]
+        }
+      },
+  	"""
+  	description: "Nuxt Head"
