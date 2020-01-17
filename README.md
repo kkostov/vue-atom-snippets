@@ -95,6 +95,16 @@ The snippets provided by the plugin will be available in all **.vue** files as w
 | `nplugs` | add plugins for global level functionality              |
 | `nplug`  | add a plugin to the plugins section                     |
 
+
+### Nuxt Page
+
+| Snippet | Purpose                                                 |
+| ------- | ------------------------------------------------------- |
+| `nasyncdata`    | Nuxt asyncData                                  |
+| `nfetch`        | Nuxt Fetch                                      |
+| `nhead`         | Nuxt Head                                       |
+
+
 ### Extra (plaintext)
 
 | Snippet     | Purpose                 |
